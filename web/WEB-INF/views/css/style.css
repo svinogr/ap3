@@ -1,0 +1,56 @@
+body{
+	font-family: 'Coming Soon', cursive;
+	font-size: 12px;
+
+}
+img{
+	max-width: 100%;
+	height:auto;
+}
+header{
+	margin: 80px 50px 30px;
+}
+.menu{
+	
+}
+.navbar-brand{
+	padding-right: 80px;
+}
+.active{
+	background-color: #87cefa
+}
+.navbar-default .navbar-nav > li > a{
+	text-transform: uppercase;
+}
+.navbar-nav:not(.navbar-right )  > li > a:hover{
+	border-bottom: 1px solid #777;
+	}
+.navbar-right > li.right > a{
+	font-size: 10px;
+}
+.slogan{
+	margin-bottom: 30px;
+	color: #777;
+
+}
+.slogan h1{
+	margin: 0px;
+	text-align: center;
+	font-size: 22px;
+	color: #777
+}
+.nav-pagination{
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	color: #777;
+}
+.footer{
+	margin-bottom: 100px;
+
+
+}
+.footer hr{
+	margin-top: 100px;
+	color: #777 ;
+}
