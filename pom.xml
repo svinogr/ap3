@@ -167,6 +167,12 @@
             <version>5.2.4.Final</version>
         </dependency>
         <!--END Hibernate -->
+        <!--MYSQL -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.38</version>
+        </dependency>
 
         <!--Jersey REST-->
         <dependency>

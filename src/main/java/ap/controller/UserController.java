@@ -33,7 +33,7 @@ public class UserController {
     public ModelAndView registrationResponse(@ModelAttribute ("user") User user){
         userDAO.registration(user);
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("result", "Пользователь добавлен"+ user.getName());
+        modelAndView.addObject("result", "Пользователь" +user.getName()+"добавлен");
         modelAndView.setViewName("registration");
         return modelAndView ;
     }

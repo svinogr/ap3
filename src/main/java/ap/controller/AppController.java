@@ -19,33 +19,36 @@ public class AppController {
     @Autowired
     DriverDAO driverDAO;
 
-    /**The Controller is opens start page
+    /**
+     * The Controller is opens start page
+     *
      * @return
      */
     @RequestMapping("/")
-    public ModelAndView getGeneralPage(){
+    public ModelAndView getGeneralPage() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("search", new Search());
         modelAndView.addObject("driver", driverDAO.getAll());
         modelAndView.setViewName("index");
-        return  modelAndView;
+        return modelAndView;
     }
 
     @ModelAttribute
-    public Search get(){
+    public Search get() {
         return new Search();
     }
 
 
-    /**The Controller return page for login users
+    /**
+     * The Controller return page for login users
+     *
      * @param model
      * @return
      */
     @RequestMapping(value = "login", method = RequestMethod.GET)
-    public String getLoginPage(Model model){
-        return"login";
+    public String getLoginPage(Model model) {
+        return "login";
     }
-
 
 
 }
