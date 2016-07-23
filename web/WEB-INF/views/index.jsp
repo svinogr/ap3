@@ -14,7 +14,7 @@
 </div>
 
 
-<table class="table-bordered" align="center">
+<table class="table-bordered" align="center"  acceptCharset="UTF-8">
 
     <c:forEach items="${driver}" var="BDriver">
         <tr>
@@ -29,7 +29,7 @@
             <td width="300px" bgcolor="#fff8dc"><c:out value="${BDriver.number}"/></td>
             <td width="300px" bgcolor="#fff8dc"><c:out value="${BDriver.description}"/></td>
             <td width="300px" bgcolor="#fff8dc"><c:out value="${BDriver.type}"/></td>
-            <td width="300px" bgcolor="#fff8dc"><c:out value="${BDriver.idImage}"/></td>
+            <td width="300px" bgcolor="#fff8dc"><img src="<c:out value="${BDriver.idImage.link}"/>"></td>
         </tr>
         <tr>
             &nbsp

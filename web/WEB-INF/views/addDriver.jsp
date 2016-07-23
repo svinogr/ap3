@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <jsp:include page="header.jsp"/>
 
@@ -20,18 +20,15 @@
                     <td><form:textarea path="description"/></td>
 
                 </tr>
-              <%--  <tr><form:select path="type">
-                    <form:options />
-                    </form:select>
-                </td>
 
-
-                </tr>--%>
-                <tr><form:select path="type">
-                    <form:options />
+                <tr><td><form:label path="type">Тип:</form:label></td>
+                    <td>
+                    <form:select path="type">
+                    <form:options items="${types}" />
 
                 </form:select>
                     </td>
+
 
 
                 </tr>

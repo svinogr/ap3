@@ -4,8 +4,12 @@ import ap.DAO.UserDAO;
 import ap.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+
+import javax.validation.Valid;
 
 @Controller
 @SessionAttributes("search")
@@ -30,12 +34,16 @@ public class UserController {
      * @return
      */
     @RequestMapping(value = "/registrationNewUser", method = RequestMethod.POST)
-    public ModelAndView registrationResponse(@ModelAttribute ("user") User user){
+    public String registrationResponse(@Valid @ModelAttribute ("user") User user, BindingResult bindingResult, Model model){
+        if (bindingResult.hasErrors()) {
+            model.addAttribute("error", "error");
+            return "registration";
+        }
+
         userDAO.registration(user);
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("result", "Пользователь" +user.getName()+"добавлен");
-        modelAndView.setViewName("registration");
-        return modelAndView ;
+        model.addAttribute("result", "Пользователь " +user.getName()+" добавлен");
+
+        return "registration" ;
     }
 
 }
