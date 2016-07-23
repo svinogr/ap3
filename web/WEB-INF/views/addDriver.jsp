@@ -5,26 +5,45 @@
 
 <div class="container" align="center">
     <h5 class="text-center">Добавление нарушителя</h5>
-<div class="col-lg-12" align="center">
-<form:form modelAttribute="driver" action="${pageContext.request.contextPath}/confidential/addNewDriver" method="post"
-           acceptCharset="UTF-8">
-    <table class="table-bordered">
-        <tr>
-            <td><form:label path="number">Номер:</form:label></td>
-            <td><form:input path="number" /></td>
+    <div class="col-lg-12" align="center">
+        <form:form modelAttribute="driver" enctype="multipart/form-data"
+                   action="${pageContext.request.contextPath}/confidential/addNewDriver" method="post"
+                   acceptCharset="UTF-8">
+            <table class="table-bordered">
+                <tr>
+                    <td><form:label path="number">Номер:</form:label></td>
+                    <td><form:input path="number"/></td>
 
-        </tr>
-        <tr>
-            <td><form:label  path="description">Описание:</form:label></td>
-            <td ><form:textarea  path="description"/></td>
+                </tr>
+                <tr>
+                    <td><form:label path="description">Описание:</form:label></td>
+                    <td><form:textarea path="description"/></td>
 
-        </tr>
-        <tr>
-            <td><input type="submit" value="Отправить"></td>
-        </tr>
+                </tr>
+              <%--  <tr><form:select path="type">
+                    <form:options />
+                    </form:select>
+                </td>
 
-    </table>
-</form:form>
+
+                </tr>--%>
+                <tr><form:select path="type">
+                    <form:options />
+
+                </form:select>
+                    </td>
+
+
+                </tr>
+                <tr>
+                    <td><input type="file" name="file">
+                    </td>
+                <tr>
+                    <td><input type="submit" value="Добавить"></td>
+                </tr>
+
+            </table>
+        </form:form>
     </div>
 </div>
 

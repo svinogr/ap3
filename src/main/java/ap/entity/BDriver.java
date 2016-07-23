@@ -19,6 +19,8 @@ public class BDriver {
     @Column(name = "date")
     private Date date;
 
+    @Column(name = "type")
+    private DriverType type;
 
     @OneToOne(cascade = CascadeType.ALL)
     private DriverImage idImage;
@@ -36,15 +38,25 @@ public class BDriver {
     }
 
 
-    public BDriver(String number, Date date, String description, DriverImage idImage) {
+    public BDriver(String number, Date date, String description, DriverImage idImage, DriverType type) {
         this.number = number;
         this.date = date;
         this.description = description;
         this.idImage = idImage;
+        this.type = type;
     }
 
     public int getId() {
         return id;
+    }
+
+    public DriverType getType() {
+        return type;
+    }
+
+
+    public void setType(DriverType type) {
+        this.type = type;
     }
 
     public void setId(int id) {

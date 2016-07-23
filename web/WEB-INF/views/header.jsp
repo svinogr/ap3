@@ -7,11 +7,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Documents</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 </head>
@@ -40,21 +41,30 @@
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="${pageContext.request.contextPath}/#">обочечники</a>
-                    </li>
-                    <li>
-                        <a href="${pageContext.request.contextPath}/#">без поворотников</a>
-                    </li>
-                    <li>
-                        <a href="${pageContext.request.contextPath}/#">парковщики</a>
+                    <li class="dropdown header-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">
+                            Сортировать
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="${pageContext.request.contextPath}/#">без поворотников</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/#">обочечники</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/#">парковщики</a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
                 <form:form class="navbar-form navbar-left" role="search" modelAttribute="search" action="${pageContext.request.contextPath}/search" method="post">
                     <div class="form-group">
                         <form:input type="text" class="form-control" placeholder="xYYYxxZZZ" path="number"/>
                        </div>
-                    <button type="submit" class="btn btn-default">Поиск</button>
+                    <button type="submit" class="btn btn-default">Поиск по номеру</button>
                 </form:form>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="right">

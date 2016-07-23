@@ -5,6 +5,9 @@
 <div class="container">
     <div class="row">
         <div align="center">
+            <a href="/testUpload" align="center">Тест Загрузка Файла</a>
+        </div>
+        <div align="center">
             <h4 align="center">Последние добавленые:</h4>
         </div>
     </div>
@@ -17,11 +20,16 @@
         <tr>
             <td width="300px" color="#777">Номер</td>
             <td width="300px" color="#777">Описание</td>
+            <td width="300px" color="#777">Тип</td>
+            <td width="500px" color="#777">Фото</td>
+
         </tr>
 
         <tr>
             <td width="300px" bgcolor="#fff8dc"><c:out value="${BDriver.number}"/></td>
             <td width="300px" bgcolor="#fff8dc"><c:out value="${BDriver.description}"/></td>
+            <td width="300px" bgcolor="#fff8dc"><c:out value="${BDriver.type}"/></td>
+            <td width="300px" bgcolor="#fff8dc"><c:out value="${BDriver.idImage}"/></td>
         </tr>
         <tr>
             &nbsp

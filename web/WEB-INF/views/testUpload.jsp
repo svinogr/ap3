@@ -7,7 +7,7 @@
     <title>Upload</title>
 </head>
 <body>
-<form:form modelAttribute="driver" enctype="multipart/form-data" action="${pageContext.request.contextPath}/addNewDriverTest" method="post"
+<form:form  enctype="multipart/form-data" action="${pageContext.request.contextPath}/addImageTest" method="post"
            acceptCharset="UTF-8">
     <table class="table-bordered">
        <tr>

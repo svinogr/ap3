@@ -3,12 +3,12 @@ package ap.controller;
 import ap.DAO.DriverDAO;
 import ap.entity.BDriver;
 import ap.entity.DriverImage;
+import ap.entity.DriverType;
+import ap.service.UploadService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -18,22 +18,34 @@ public class DriverController {
     @Autowired
     DriverDAO driverDAO;
 
-    /**The Controller add new bDriver in BD
+    @Autowired
+    UploadService uploadService;
+
+    /**
+     * The Controller add new bDriver in BD
+     *
      * @param bDriver
      * @return
      */
     @RequestMapping(value = "/confidential/addNewDriver", method = RequestMethod.POST)
-    public ModelAndView addNewBadDriver(@ModelAttribute("driver")BDriver bDriver){
+    public ModelAndView addNewBadDriver(@ModelAttribute("driver") BDriver bDriver, @RequestParam("file") MultipartFile file) {
+        System.out.println(bDriver.getType());
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("addDriver");
         modelAndView.addObject("driver", new BDriver());
         bDriver.setNumber(bDriver.getNumber().toLowerCase());
-        //TODO реализовать форму и добавление картинки к обьекту и в базу
-        DriverImage driverImage = new DriverImage();
+        if(file !=null){
+            String nameUoloadFile = uploadService.uploadFile(file);
+            DriverImage driverImage = new DriverImage();
+            driverImage.setLink(nameUoloadFile);
+            bDriver.setIdImage(driverImage);
+        }
         driverDAO.add(bDriver);
         return modelAndView;
     }
-    /**The Controller is opens jsp page for creating new bDriver
+
+    /**
+     * The Controller is opens jsp page for creating new bDriver
      *
      * @return
      */
@@ -44,7 +56,6 @@ public class DriverController {
         modelAndView.setViewName("addDriver");
         return modelAndView;
     }
-
 
 
 }
