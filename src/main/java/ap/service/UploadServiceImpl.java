@@ -1,11 +1,16 @@
 package ap.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.*;
 import java.util.UUID;
 
 public class UploadServiceImpl implements UploadService {
+    @Autowired
+    Environment environment;
+
     @Override
     public String uploadFile(MultipartFile file) {
         String name;
@@ -14,7 +19,7 @@ public class UploadServiceImpl implements UploadService {
             name = id.toString().replaceAll("-", "") + ".jpg";
             //TODO сделать валидацию на тип файла
           //  File saveFile = new File(".\\web\\" + name);
-            File saveFile = new File(".\\images\\" + name);
+            File saveFile = new File(environment.getRequiredProperty("location")+ name);
             name = saveFile.getPath().substring(6);
             try {
                 BufferedOutputStream outputStream = new BufferedOutputStream(new FileOutputStream(saveFile));

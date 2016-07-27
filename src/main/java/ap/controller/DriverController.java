@@ -35,6 +35,7 @@ public class DriverController {
         ModelAndView modelAndView;
         modelAndView = createModelForAddDrive();
         bDriver.setNumber(bDriver.getNumber().toLowerCase());
+        System.out.println(file.getContentType());
         String nameUoloadFile = uploadService.uploadFile(file);
         DriverImage driverImage = new DriverImage();
         driverImage.setLink(nameUoloadFile);
@@ -64,7 +65,6 @@ public class DriverController {
         ModelAndView modelAndView = new ModelAndView();
         List<String> typesOfDriver = new ArrayList();
         for (DriverType type : DriverType.values()) {
-            System.out.println(type.toString());
             typesOfDriver.add(type.toString());
         }
         modelAndView.addObject("types", typesOfDriver);

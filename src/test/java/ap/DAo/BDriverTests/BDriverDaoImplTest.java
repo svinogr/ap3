@@ -1,4 +1,4 @@
-package ap.DAo;
+package ap.DAo.BDriverTests;
 
 import ap.DAO.DriverDAO;
 import ap.config.HibernateConfig;
