@@ -15,7 +15,9 @@ import org.springframework.test.context.web.WebAppConfiguration;
 @WebAppConfiguration
 @ContextConfiguration(classes = HibernateConfig.class)
 public class BDriverDaoImplTest {
+
     BDriver bDriver;
+
     @Autowired
     DriverDAO driverDAO;
 
@@ -27,13 +29,11 @@ public class BDriverDaoImplTest {
         driverDAO.add(bDriver);
 
     }
+
     @After
     public void deleteNewTestDriver(){
         driverDAO.delete(bDriver);
     }
-
-
-
 }
 
 

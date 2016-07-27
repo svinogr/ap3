@@ -2,7 +2,6 @@ package ap.controller;
 
 import ap.DAO.SearchDAO;
 import ap.entity.Search;
-import org.hibernate.envers.Audited;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -12,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class SearchController {
+
     @Autowired
     SearchDAO searchDAO;
 
@@ -22,9 +22,6 @@ public class SearchController {
         modelAndView.setViewName("searched");
         return modelAndView;
     }
-
-
-
 }
 
 

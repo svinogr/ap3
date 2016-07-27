@@ -1,7 +1,6 @@
 package ap.controller;
 
 import ap.DAO.DriverDAO;
-import ap.entity.BDriver;
 import ap.entity.Search;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
-
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
@@ -40,7 +38,6 @@ public class AppController {
         return new Search();
     }
 
-
     /**The Controller opens page with driver by interval
      * @param request
      * @return
@@ -56,7 +53,6 @@ public class AppController {
         return modelAndView;
     }
 
-
     /**
      * The Controller return page for login users
      *
@@ -67,6 +63,4 @@ public class AppController {
     public String getLoginPage(Model model) {
         return "login";
     }
-
-
 }

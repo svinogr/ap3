@@ -1,17 +1,14 @@
 package ap.DAo.BDriverTests;
 
-import ap.DAO.BasicDAO;
 import ap.DAO.DriverDAO;
 import ap.config.HibernateConfig;
 import ap.entity.BDriver;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.Lifecycle;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,10 +16,12 @@ import java.util.List;
 @WebAppConfiguration
 @ContextConfiguration(classes = HibernateConfig.class)
 public class BDriverDaoImpl100records {
+
     BDriver bDriver;
 
     @Autowired
     DriverDAO driverDAO;
+
     @Test
     public void create100records(){
         for(int i=0; i<100; i++ ){
@@ -33,6 +32,7 @@ public class BDriverDaoImpl100records {
 
         }
     }
+
     @Test
     public  void delete100records(){
         List<BDriver> list = new ArrayList<>();

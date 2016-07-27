@@ -4,7 +4,6 @@ import ap.DAO.SearchDAO;
 import ap.config.HibernateConfig;
 import ap.entity.BDriver;
 import ap.entity.Search;
-import ap.entity.User;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -14,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Import;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +21,6 @@ import java.util.List;
 public class SearchDAOImpl implements SearchDAO {
     @Autowired
     SessionFactory sessionFactory;
-
 
     /**The controller return list of searched drivers by number
      * @param search

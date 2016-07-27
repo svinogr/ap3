@@ -1,9 +1,7 @@
 package ap.entity;
 
-import org.hibernate.annotations.Type;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
-
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.util.Date;
@@ -11,6 +9,7 @@ import java.util.Date;
 @Entity
 @Table(name = "users")
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;

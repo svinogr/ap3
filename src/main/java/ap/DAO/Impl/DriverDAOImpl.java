@@ -1,6 +1,5 @@
 package ap.DAO.Impl;
 
-import ap.DAO.BasicDAO;
 import ap.DAO.DriverDAO;
 import ap.config.HibernateConfig;
 import ap.entity.BDriver;
@@ -8,11 +7,9 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.Lifecycle;
 import org.springframework.context.annotation.Import;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.ArrayList;
 import java.util.List;
 

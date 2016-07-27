@@ -6,6 +6,7 @@ import java.util.Date;
 @Entity
 @Table(name = "drivers")
 public class BDriver {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
@@ -37,7 +38,6 @@ public class BDriver {
     public BDriver() {
     }
 
-
     public BDriver(String number, Date date, String description, DriverImage idImage, String type) {
         this.number = number;
         this.date = date;
@@ -53,7 +53,6 @@ public class BDriver {
     public String getType() {
         return type;
     }
-
 
     public void setType(String type) {
         this.type = type;
@@ -86,5 +85,4 @@ public class BDriver {
     public void setDate(Date date) {
         this.date = date;
     }
-
 }

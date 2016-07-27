@@ -1,6 +1,5 @@
 package ap.config;
 
-
 import ap.DAO.DriverDAO;
 import ap.DAO.Impl.DriverDAOImpl;
 import ap.DAO.Impl.SearchDAOImpl;
@@ -38,10 +37,12 @@ public class AppContext {
         jdbcImpl.setAuthoritiesByUsernameQuery(environment.getRequiredProperty("rolesByQuery"));
         return jdbcImpl;
     }
+
     @Bean
     public UserDAO userDAO(){
         return new UserDAOImpl();
     }
+
     @Bean
     public UserRoleDAO userRoleDAO(){
         return new UserRoleDAOImpl();
@@ -50,6 +51,7 @@ public class AppContext {
     @Bean
     public DriverDAO driverDAO(){return new DriverDAOImpl();
     }
+
     @Bean
     public SearchDAO searchDAO(){
         return new SearchDAOImpl();
@@ -64,6 +66,4 @@ public class AppContext {
     public CommonsMultipartResolver multipartResolver() {
         return new CommonsMultipartResolver();
     }
-
-
 }
