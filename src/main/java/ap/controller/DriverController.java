@@ -32,7 +32,6 @@ public class DriverController {
      */
     @RequestMapping(value = "/confidential/addNewDriver", method = RequestMethod.POST)
     public ModelAndView addNewBadDriver(@ModelAttribute("driver") BDriver bDriver, @RequestParam("file") MultipartFile file) {
-        System.out.println(bDriver.getDescription());
         ModelAndView modelAndView;
         modelAndView = createModelForAddDrive();
         bDriver.setNumber(bDriver.getNumber().toLowerCase());

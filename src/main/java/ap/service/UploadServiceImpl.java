@@ -11,8 +11,11 @@ public class UploadServiceImpl implements UploadService {
         String name;
         if (!file.isEmpty()) {
             UUID id = UUID.randomUUID();
-             name= id.toString().replaceAll("-", "") + ".jpg";
-            File saveFile = new File("C:\\f\\" + name);
+            name = id.toString().replaceAll("-", "") + ".jpg";
+            //TODO сделать валидацию на тип файла
+          //  File saveFile = new File(".\\web\\" + name);
+            File saveFile = new File(".\\images\\" + name);
+            name = saveFile.getPath().substring(6);
             try {
                 BufferedOutputStream outputStream = new BufferedOutputStream(new FileOutputStream(saveFile));
                 outputStream.write(file.getBytes());
