@@ -9,12 +9,12 @@
     <title>Documents</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src=${pageContext.request.contextPath}js/bootstrap.min.js"></script>
 </head>
 <body>
 <header>
@@ -68,7 +68,7 @@
                 </form:form>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="right">
-                        <a href="/confidential/addDriver">добавить нарушителя</a>
+                        <a href="${pageContext.request.contextPath}/confidential/addDriver">добавить нарушителя</a>
                     </li>
                     <li class="right">
                         <a href="${pageContext.request.contextPath}/registration">зарегистрироваться</a>
@@ -97,6 +97,6 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}js/bootstrap.min.js"></script>
 </body>
 </html>

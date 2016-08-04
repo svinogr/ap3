@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div align="center">
-            <a href="/testUpload" align="center">Тест Загрузка Файла</a>
+            <a href="${pageContext.request.contextPath}/testUpload" align="center">Тест Загрузка Файла</a>
         </div>
         <div align="center">
             <h4 align="center">Последние добавленые:</h4>
@@ -48,19 +48,19 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/new?page=0">1</a>
+                    <a href="${pageContext.request.contextPath}/new?page=0">1</a>
                 </li>
                 <li>
-                    <a href="/new?page=20">2</a>
+                    <a href="${pageContext.request.contextPath}/new?page=20">2</a>
                 </li>
                 <li>
-                    <a href="/new?page=40">3</a>
+                    <a href="${pageContext.request.contextPath}/new?page=40">3</a>
                 </li>
                 <li>
-                    <a href="/new?page=50">4</a>
+                    <a href="${pageContext.request.contextPath}/new?page=50">4</a>
                 </li>
                 <li>
-                    <a href="/new?page=60">5</a>
+                    <a href="${pageContext.request.contextPath}/new?page=60">5</a>
                 </li>
                 <li>
                     <a href="#" aria-label="Next">
