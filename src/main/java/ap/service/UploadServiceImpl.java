@@ -17,7 +17,7 @@ public class UploadServiceImpl implements UploadService {
         if (!file.isEmpty()) {
             UUID id = UUID.randomUUID();
             name = id.toString().replaceAll("-", "") + ".jpg";
-            //TODO сделать валидацию на тип файла
+            //TODO сделать добавление отсутсвующей картиник и валидацию на тип файла
           //  File saveFile = new File(".\\web\\" + name);
             File saveFile = new File(environment.getRequiredProperty("location")+ name);
             name = saveFile.getPath().substring(6);

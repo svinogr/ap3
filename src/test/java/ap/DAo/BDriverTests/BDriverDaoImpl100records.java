@@ -24,12 +24,11 @@ public class BDriverDaoImpl100records {
 
     @Test
     public void create100records(){
-        for(int i=0; i<100; i++ ){
+        for(int i=0; i<45; i++ ){
             bDriver = new BDriver();
-            bDriver.setNumber(i+" a555aaa178");
+            bDriver.setNumber("a555aaa0"+i);
             bDriver.setDescription("test");
             driverDAO.add(bDriver);
-
         }
     }
 
