@@ -23,7 +23,9 @@ import static org.junit.Assert.assertEquals;
 @WebAppConfiguration
 @ContextConfiguration(classes = HibernateConfig.class)
 public class SearchDaoImpTest {
+
     BDriver driver;
+
     @Autowired
     DriverDAO driverDAO;
 

@@ -28,5 +28,4 @@ public class UserDaoImplTest {
         userDAO.registration(user);
         userDAO.delete(user);
     }
-
 }

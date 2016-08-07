@@ -1,25 +1,35 @@
 package ap.entity;
 
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 @Entity
 @Table(name = "users")
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    @Column(name = "name")
+    @Column(name = "name", nullable = false)
+    @NotEmpty(message = "Пожалуйста, введите имя")
     private String name;
 
-    @Column(name = "login")
+    @Column(name = "login", nullable = false)
+    @NotEmpty(message = "Пожалуйста, введите логин")
     private String login;
 
-    @Column(name = "password")
+    @Column(name = "password", nullable = false)
+    @NotEmpty(message = "Пожалуйста, введите пароль")
+    @Size(min = 4, message = "Размер пароля должен быть минимум 4 символов")
     private String password;
 
-    @Column(name = "email")
+    @Column(name = "email", nullable = false, unique = true)
+    @Email(message = "Введенный адрес не является корректным адресом почты")
+    @NotEmpty(message = "Пожалуйста, введите почтовый адрес")
     private String email;
 
     @Column(name = "date")

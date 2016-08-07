@@ -10,18 +10,22 @@
     </div>
 </div>
 
-
-<table class="table-bordered" align="center">
+<table class="table-bordered" align="center"  acceptCharset="UTF-8">
 
     <c:forEach items="${driver}" var="BDriver">
         <tr>
             <td width="300px" color="#777">Номер</td>
             <td width="300px" color="#777">Описание</td>
+            <td width="300px" color="#777">Тип</td>
+            <td width="500px" color="#777">Фото</td>
+
         </tr>
 
         <tr>
             <td width="300px" bgcolor="#fff8dc"><c:out value="${BDriver.number}"/></td>
             <td width="300px" bgcolor="#fff8dc"><c:out value="${BDriver.description}"/></td>
+            <td width="300px" bgcolor="#fff8dc"><c:out value="${BDriver.type}"/></td>
+            <td width="300px" bgcolor="#fff8dc"><img src="<c:out value="${BDriver.idImage.link}"/>"></td>
         </tr>
         <tr>
             &nbsp
@@ -40,19 +44,19 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">1</a>
+                    <a href="${pageContext.request.contextPath}/new?page=0">1</a>
                 </li>
                 <li>
-                    <a href="#">2</a>
+                    <a href="${pageContext.request.contextPath}/new?page=20">2</a>
                 </li>
                 <li>
-                    <a href="#">3</a>
+                    <a href="${pageContext.request.contextPath}/new?page=40">3</a>
                 </li>
                 <li>
-                    <a href="#">4</a>
+                    <a href="${pageContext.request.contextPath}/new?page=50">4</a>
                 </li>
                 <li>
-                    <a href="#">5</a>
+                    <a href="${pageContext.request.contextPath}/new?page=60">5</a>
                 </li>
                 <li>
                     <a href="#" aria-label="Next">

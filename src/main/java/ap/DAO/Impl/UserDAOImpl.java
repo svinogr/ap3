@@ -66,8 +66,5 @@ public class UserDAOImpl extends BasicDAOImpl<User> implements UserDAO {
             e.printStackTrace();
         }
         return user.getId();
-
-
     }
-
 }

@@ -1,7 +1,6 @@
 package ap.DAO;
 
 import ap.entity.Search;
-
 import java.util.List;
 
 public interface SearchDAO {
