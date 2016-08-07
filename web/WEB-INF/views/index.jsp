@@ -5,14 +5,10 @@
 <div class="container">
     <div class="row">
         <div align="center">
-            <a href="${pageContext.request.contextPath}/testUpload" align="center">Тест Загрузка Файла</a>
-        </div>
-        <div align="center">
             <h4 align="center">Последние добавленые:</h4>
         </div>
     </div>
 </div>
-
 
 <table class="table-bordered" align="center"  acceptCharset="UTF-8">
 

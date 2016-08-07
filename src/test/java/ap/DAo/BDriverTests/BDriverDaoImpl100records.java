@@ -26,7 +26,7 @@ public class BDriverDaoImpl100records {
     public void create100records(){
         for(int i=0; i<100; i++ ){
             bDriver = new BDriver();
-            bDriver.setNumber(i+"a555aaa178");
+            bDriver.setNumber(i+" a555aaa178");
             bDriver.setDescription("test");
             driverDAO.add(bDriver);
 
