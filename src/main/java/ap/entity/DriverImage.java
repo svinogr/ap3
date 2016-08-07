@@ -1,11 +1,10 @@
 package ap.entity;
 
-import org.hibernate.annotations.Cascade;
-
 import javax.persistence.*;
 
 @Entity
 public class DriverImage {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
@@ -24,7 +23,6 @@ public class DriverImage {
 
     public DriverImage() {
     }
-
 
     public String getLink() {
         return link;
